@@ -2,16 +2,16 @@ package homeworksJavaPro.homework05_05_2023;
 
 public class Person {
 
-private String lastName;
-private String name;
-private String post;
-private String email;
-private String phone;
-private int salary ;
-private int age ;
+    private String lastName;
+    private String name;
+    private Position post;
+    private String email;
+    private String phone;
+    private int salary;
+    private int age;
 
 
-    public Person(String lastName, String name, String post, String email, String phone, int salary, int age) {
+    public Person(String lastName, String name, Position post, String email, String phone, int salary, int age) {
         this.lastName = lastName;
         this.name = name;
         this.post = post;
