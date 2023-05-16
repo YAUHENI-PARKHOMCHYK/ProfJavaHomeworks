@@ -1,4 +1,4 @@
-package lesson4;
+package homeworksJavaPro.homework12_05;
 
 public class Plate {
     private int food;

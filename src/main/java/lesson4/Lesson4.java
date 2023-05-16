@@ -1,16 +1,20 @@
 package lesson4;
 
+import java.lang.reflect.Array;
+
 public class Lesson4 {
     public static void main(String[] args) {
-    Cat cat = new Cat(10);
-    Plate plate = new Plate(20);
+    Plate plate = new Plate(30);
+        Cat cat [] = {new Cat(15),
+        new Cat(10),
+        new Cat(12),
+        new Cat(10)};
+
         System.out.println(plate);
-//    int food = plate.getFood();
-//    plate.setFood(plate.getFood()- cat.getAppetite());
-//        cat.eat(plate);
-        plate.yammy(cat);
-//    plate.decreaseFood(cat.getAppetite());
-        System.out.println(cat);
-        System.out.println(plate);
+        for(int i = 0; i<cat.length; i++) {
+            cat[i].eat(plate);
+            System.out.println(cat[i]);
+            System.out.println(plate);
+        }
     }
 }
