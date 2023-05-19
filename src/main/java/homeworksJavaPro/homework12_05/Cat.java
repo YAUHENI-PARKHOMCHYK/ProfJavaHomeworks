@@ -9,10 +9,6 @@ public class Cat {
     public int getAppetite() {
         return appetite;
     }
-//    public void eat(Plate plate){
-//        plate.decreaseFood(appetite);
-//    }
-
     public void eat (Plate plate){
         if(fullness == false) {
             if (plate.getFood() < getAppetite()) {
