@@ -14,5 +14,6 @@ public class HashMap {
         house.put("TJ",3);
         System.out.println(house);
         System.out.println(house.get("Mike"));
+
     }
 }

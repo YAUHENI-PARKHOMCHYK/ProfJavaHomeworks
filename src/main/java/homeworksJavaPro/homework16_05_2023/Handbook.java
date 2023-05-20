@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Handbook {
 
-    static Map<Object, List<Integer>> phoneNumberBook = new HashMap<>();
+    Map<Object, List<Integer>> phoneNumberBook = new HashMap<>();
 
     public void add(String lastName, Integer phoneNumber) {
         List<Integer> info = phoneNumberBook.getOrDefault(lastName, new ArrayList<>());
