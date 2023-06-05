@@ -1,40 +1,36 @@
-package lesson6;
+package lesson7;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class RubberArray {
-    private int[] array;
+public class RubberArray <E>{
+    private Object[] array;
 
     public RubberArray(){
-        array = new int [0];
+        array = new Object [0];
     }
     public void add(int value){
-        int[] newArray = new int[array.length+1];
+        Object[] newArray = new Object[array.length+1];
         System.arraycopy(array,0,newArray,0,array.length);
         newArray[array.length] = value;
         array = newArray;
     }
     public void add(int index, int value){
-        int[] newArray = new int[array.length+1];
+        Object[] newArray = new Object[array.length+1];
         System.arraycopy(array,0,newArray,0,index);
         System.arraycopy(array,index,newArray,index+1,array.length-(index));
         newArray[index] = value;
-        array = newArray;
+        array =  newArray;
     }
     public void remove(int index){
-        int[] newArray = new int[array.length-1];
+        Object[] newArray = new Object[array.length-1];
         System.arraycopy(array,0,newArray,0,index);
         System.arraycopy(array,index+1,newArray,index,array.length - (index+1));
         array = newArray;
     }
-    public int get(int index){
-    return array[index];
+    public E get(int index){
+    return (E) array[index];
     }
     public Object indexOf(int value){
         for(int i = 0; i<array.length; i++){
-            if(array[i] == value){
+            if(array[i].equals(value)){
                 return i;
             }
         }
@@ -42,7 +38,7 @@ public class RubberArray {
     }
     public boolean contains(int value){
         for(int i = 0; i<array.length;i++)
-            if(array[i]==value)
+            if(array[i].equals(value))
                 return true;
         return false;
     }
@@ -51,12 +47,12 @@ public class RubberArray {
     }
     public boolean isEmpty(){
         for (int i = 0; i<array.length; i++)
-            if(array[i]!=0)
+            if(array[i].equals(0))
                 return false;
         return true;
     }
     public void addAll(int... value) {
-        int[] newArray = new int[array.length + value.length];
+        Object[] newArray = new Object[array.length + value.length];
         System.arraycopy(array, 0, newArray, 0, array.length);
         int indexForValue;
         indexForValue = array.length;
@@ -67,7 +63,7 @@ public class RubberArray {
         array = newArray;
     }
     public void addAall(int index, int... value){
-        int[] newArray = new int[array.length + value.length];
+        Object[] newArray = new Object[array.length + value.length];
         System.arraycopy(array,0,newArray,0,index);
         int newIndex;
         newIndex = index;

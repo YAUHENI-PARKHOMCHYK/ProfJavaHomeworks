@@ -1,5 +1,7 @@
 package homeworksJavaPro.homework19_05_2023;
 
+import java.sql.Array;
+
 public class RubberArray {
     private int[] array;
 
@@ -33,13 +35,13 @@ public class RubberArray {
         return array[index];
     }
 
-    public Object indexOf(int value) {
+    public int indexOf(int value) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == value) {
                 return i;
             }
         }
-        return ("didn't find value " + value);
+        return -1;
     }
 
     public boolean contains(int value) {
@@ -58,6 +60,10 @@ public class RubberArray {
             if (array[i] != 0)
                 return false;
         return true;
+    }
+    public void clear(){
+        int [] newArray = new int[0];
+        array=newArray;
     }
 
     public void addAll(int... value) {
