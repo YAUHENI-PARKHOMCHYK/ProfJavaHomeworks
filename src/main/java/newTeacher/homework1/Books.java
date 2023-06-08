@@ -7,16 +7,24 @@ public class Books extends Library{
     private int price;
     private String userName;
     private int shelf;
-
-    public Books(String bookName, int isbn, int price, String userName, int shelf) {
+    private boolean inLibrary;
+    
+    public Books(String bookName, int isbn, int price, int shelf) {
         this.bookName = bookName;
         this.isbn = isbn;
         this.price = price;
-        this.userName = userName;
+//            this.userName = userName;
         this.shelf = shelf;
     }
 
-    public void draw(){
-        System.out.println("Книга " + bookName  + "номер ISBN " + isbn + "Цена " + price);
+    @Override
+    public String toString() {
+        return "Books{" +
+                "bookName='" + bookName + '\'' +
+                ", isbn=" + isbn +
+                ", price=" + price +
+                ", shelf=" + shelf +
+                ", inLibrary=" + inLibrary +
+                '}';
     }
 }
