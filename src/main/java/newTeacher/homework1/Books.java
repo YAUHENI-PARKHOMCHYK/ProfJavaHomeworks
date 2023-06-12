@@ -13,7 +13,6 @@ public class Books extends Library{
         this.bookName = bookName;
         this.isbn = isbn;
         this.price = price;
-//            this.userName = userName;
         this.shelf = shelf;
     }
 

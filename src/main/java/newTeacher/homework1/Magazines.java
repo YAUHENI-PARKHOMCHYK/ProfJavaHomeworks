@@ -3,14 +3,12 @@ package newTeacher.homework1;
 public class Magazines extends Library{
 
     private String magazineName;
-    private String userName;
     private int price;
     private int yearMagazine;
     private int numberMagazine;
 
-    public Magazines(String magazineName, String userName, int price, int yearMagazine, int numberMagazine) {
+    public Magazines(String magazineName, int price, int yearMagazine, int numberMagazine) {
         this.magazineName = magazineName;
-        this.userName = userName;
         this.price = price;
         this.yearMagazine = yearMagazine;
         this.numberMagazine = numberMagazine;
@@ -20,7 +18,6 @@ public class Magazines extends Library{
     public String toString() {
         return "Magazines{" +
                 "magazineName='" + magazineName + '\'' +
-                ", userName='" + userName + '\'' +
                 ", price=" + price +
                 ", yearMagazine=" + yearMagazine +
                 ", numberMagazine=" + numberMagazine +

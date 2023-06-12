@@ -36,6 +36,30 @@ public class Practic {
         }
         numbers.forEach(System.out::println);
 
+        List<Double> num = new ArrayList<>();
+        num.add(2.4);
+        num.add(1.3);
+        num.add(2.4);
+        num.add(1.7);
+        num.add(3.4);
+        num.add(5.3);
+        num.add(4.4);
+        num.add(2.1);
+
+        double dir = 0;
+        int size = num.size();
+        for(int i = 0; i<size; i++){
+            for(int j = i+1; j<num.size();j++){
+                if(num.get(i)>num.get(j)){
+                    dir = num.get(i);
+                    num.set(i,num.get(j));
+                    num.set(j,dir);
+                }
+            }
+            System.out.println(num.get(i));
+
+        }
+
     }
 
 }

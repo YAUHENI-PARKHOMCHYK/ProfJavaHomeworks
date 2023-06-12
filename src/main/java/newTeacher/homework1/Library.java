@@ -1,21 +1,20 @@
 package newTeacher.homework1;
 
-public abstract class Library implements Directory{
+import java.util.ArrayList;
 
-    private String bookName;
-    private int isbn;
-    private int price;
+public class Library{
+
+
     private String userName;
-    private int shelf;
+    private String type;
 
 
+    public void name(String userName,String type){
+        this.userName = userName;
+        this.type = type;
 
-    Type book = Type.BOOK;
-    Type magazine = Type.MAGAZINE;
-    public void name(String type){
-        if(type.equals(book)){
+        ArrayList<Books> books = new ArrayList<>();
 
-        }
     }
 
 }
